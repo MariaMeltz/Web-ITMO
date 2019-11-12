@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<header>
+		<title>вас посетила полиция</title>
+		<LINK REL="stylesheet" TYPE="text/css" href="style.css">
+		<META CHARSET=“UTF-8">
+	</header>
+
+	<body bgcolor="#ffc0cb" text="black" topmargin="40px" leftmargin="100px">
+
+		<div><h1>Регистрация заявки</h1>
+		<p>Для подачи заявки заполните все поля :</p></div>
+		<div style="background-image:url(https://www.meme-arsenal.com/memes/80458ec899f9a7a04474d14ab027d166.jpg)">
+			<form action="/servlet" method="get" name="testtest">
+				<br>
+
+				<section class="name">
+					<label for="name"><div style="color:black "> Как к вам обращаться?</div></label>
+					<input type="text" name="name" size="80" id="name">
+				</section>
+
+				<br>
+				<br>
+
+				<section class="sex">
+					<p>Вы обратились в самый справедливый суд мира из-за</p>
+					<label for="r">ограбления</label>
+					<input type="radio" name="case" id="r" value="rob">
+					<br>
+					<label for="m">убийства</label>
+					<input type="radio" name="case" id="m" value="murder">
+					<br>
+					<label for="o">другое</label>
+					<input type="radio" name="case" id="o" value="other">
+					<br>
+					<TEXTAREA NAME="what" WRAP="virtual" COLS="40" ROWS="3">расскажите...</TEXTAREA><br>
+					<br>
+				</section>
+
+				<br>
+				<br>
+
+				<section class="interest">
+					<p>вы являетесь</p>
+					<label for="v">жертвой</label>
+					<input type="radio" name="interest" id="v" value="victim">
+					<br>
+					<label for="w">свидетелем</label>
+					<input type="radio" name="interest" id="w" value="witness">
+					<br>
+					<label for="c">преступником</label>
+					<input type="radio" name="interest" id="c" value="culprit">
+				</section>
+
+				<br>
+				<br>
+
+				<section class="look2">
+					<p>вам необходимо</p>
+					<label for="law">оплатить адвоката/label>
+					<input type="checkbox" name="what" id="law" value="law">
+					<br>
+					<label for="prot">предоставить убежище</label>
+					<input type="checkbox" name="what" id="prot" value="prot">
+					<br>
+					<label for="convo">оказать психологическую поддержку</label>
+					<input type="checkbox" name="what" id="convo" value="convo">
+					<br>
+					<label for="statya">объяснить статью</label>
+					<input type="checkbox" name="what" id="statya" value="sleep">
+				</section>
+
+				<br>
+				<br>
+
+				<section class="country">
+					<label for="country">вы гражданин</label>
+					<select name="country" id="country">
+						<option value="rus">России</option>
+						<option value="sng">Страны СНГ</option>
+						<option value="etc">Другое</option>
+					</select>
+				</section>
+
+				<br>
+				<br>
+
+			</form>
+		</div>
+
+
+	</body>
+</html>
