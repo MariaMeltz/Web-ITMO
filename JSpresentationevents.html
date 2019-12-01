@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <LINK REL="stylesheet" TYPE="text/css" href="style.css">
+    <title>JavaScript 3</title>
+    <META CHARSET="UTF-8">
+    <style>
+        mark {
+            background-color: #f5d7e8;
+            color: #4a3046;
+        }
+    </style>
+    <script>
+        function clickAlert(event)
+        {
+            if (event.button==2)
+            {
+                alert("Была нажата правая кнопка мыши!");
+            }
+            else
+            {
+                alert("Была нажата левая кнопка мыши!");
+            }
+        }
+
+        function whichButton(event)
+        {
+            alert(event.keyCode);
+        }
+
+        function coordinats(event)
+        {
+            var x = event.clientX;
+            var y = event.clientY;
+            alert("Координата Х: " + x + "; Координата У: " + y);
+        }
+
+        function coordinatsScreen(event)
+        {
+            var x = event.screenX;
+            var y = event.screenY;
+            alert("X = " + x + "; Y = " + y);
+        }
+
+    </script>
+</head>
+<body background="https://i.pinimg.com/originals/1c/4d/84/1c4d847a77b95f6dd8b1e2e9daf09dbf.jpg" onkeyup="whichButton(event)" onmouseup="whichElement(event)">
+<h1 onmousedown="clickAlert(event)"><mark>нажмите, чтобы узнать кнопку мыши</mark></h1>
+<h1><mark>нажмите любую клавишу клавиатуры, чтобы узнать ее код</mark></h1>
+<h1 onmouseup="coordinats(event)"><mark>нажмите, чтобы узнать координаты мыши</mark></h1>
+<h1 onmouseup="coordinatsScreen(event)"><mark>нажмите, чтобы узнать координаты мыши относительно экрана</mark></h1>
+</body>
+</html>
