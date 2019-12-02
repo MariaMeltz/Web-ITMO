@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>8-9 лекция</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body bgcolor="#ffc0cb">
+<button id="b0">сбить ссылки</button><br><br>
+<table border="3" width="500">
+    <tr>
+        <td>текст</td>
+        <td>эффект/анимация</td>
+    </tr>
+    <tr height="70">
+        <td width="250"><p id="hide">секретная информация (нажми дважды, чтобы спрятать быстро).</p></td>
+        <td><button id="b1">спрятать медленно</button></td>
+    </tr>
+    <tr height="70">
+        <td width="250"><p id="changecolor">я меняю цвет!</p></td>
+        <td><button id="b4">поменять цвет</button></td>
+    </tr>
+    <tr height="70">
+        <td width="250">
+            <div id="div3" style="width:200px;height:20px;display:none;background-color:#4a3046;"></div>
+            <div id="div1" style="width:200px;height:20px;display:none;background-color:#f5d7e8;"></div>
+            <div id="div2" style="width:200px;height:20px;display:none;background-color:#4a3046;"></div>
+
+        </td>
+        <td><button id="b2">показать квадратики</button></td>
+    </tr>
+    <tr height="70">
+        <td width="250"><p id="move" style="position:absolute">поехали</p></td>
+        <td><button id="b3">сдвинуть текст</button></td>
+    </tr>
+    <tr height="70">
+        <td width="250"><p id="fade" style="position:absolute">я бледнею</p></td>
+        <td><button id="b5">бледней</button></td>
+    </tr>
+</table>
+<br><br>
+<a href="https://www.kinopoisk.ru/film/19504/" id="hr1">
+    Алиса в Стране Чудес
+</a>
+<script>
+    $(document).ready(function(){
+        $("#b1").click(function(){
+            $("#hide").hide(1000);
+        });
+        $("#b1,#b2,#b3,#b4,#b5").css("color","blue")
+        $("p").css("color","purple")
+
+        $("#hide").dblclick(function(){
+            $(this).hide();
+        });
+        $("#b2").click(function(){
+            $("#div1").fadeIn();
+            $("#div2").fadeIn("slow");
+            $("#div3").fadeIn(3000);
+        });
+        $("#b3").click(function() {
+            $("#move").animate({left:90});
+        });
+        $("#b4").click(function() {
+            $("#changecolor").css("color","red");
+        });
+        $("#b5").click(function() {
+            $("#fade").animate({opacity: '0.2'});
+        });
+        $("#b0").click(function() {
+            $("a").removeAttr("target");
+            $('#hr1').replaceWith("<a href=\"https://www.kinopoisk.ru/film/19504/\">\n" + "Алиса в Стране Чудес\n" + "</a>");
+        });
+        $("a").prepend("&#8599;").attr("target","blank");
+    });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <LINK REL="stylesheet" TYPE="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>5 лекция</title>
+</head>
+<body bgcolor="#ffc0cb" text="#6495ed" link="808080">
+<style>
+    .nof:hover,.shown:hover,.showh:hover,.showa:hover,.send:hover{
+        background-color: #4a3046; /* Green */
+        color: white;
+    }
+    .nof{
+        background-image: url("images/icons8-broken-robot-50.jpg");
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        padding: 16px;
+        text-align: right;
+        width: 120px;
+    }
+    .showh{
+        background-image: url("images/icons8-code-50.jpg");
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        padding: 16px;
+        text-align: right;
+        width: 160px;
+    }
+    .shown{
+        background-image: url("images/icons8-screen-50.jpg");
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        padding: 16px;
+        text-align: right;
+        width: 130px;
+    }
+    .showa{
+        background-image: url("images/icons8-areas-50.jpg");
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        padding: 16px;
+        text-align: right;
+        width: 100px;
+    }
+    .send{
+        background-image: url("images/icons8-send-50.jpg");
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        padding: 16px;
+        text-align: right;
+        width: 120px;
+    }
+</style>
+<a name="beginning">сюда можно вернуться</a> <br>
+<script>
+    document.write("это предложение из пяти слов");
+</script>
+<br>
+количество слов:
+<script>
+    function WordCount(str){
+        return str.split(' ').length;
+    }
+    let a = WordCount("это предложение из пяти слов");
+    document.write(a);
+</script>
+<br>
+URL:
+<script>
+    document.write(document.URL);
+</script>
+<br>
+имя файла:
+<script>
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    let name = page.split(".");
+    document.write(name[0]);
+</script>
+<br>
+расширение файла:
+<script>
+    var ending = page.split(".").pop();
+    document.write(ending);
+</script>
+<br><br>
+<a href="https://www.kinopoisk.ru/film/19504/" target="_blank">
+    Алиса в Стране Чудес
+</a>
+<br>
+<img src="http://www.kursivom.ru/wp-content/uploads/2018/12/1951_Alice_In_Wonderland_Disney_184.jpg" width="300" height="200" id="alice">
+<br><br>
+<a href="https://www.kinopoisk.ru/film/683999/" target="_blank">
+    Отель "Гранд-Будапешт"
+</a>
+<br>
+<img src="https://icdn.lenta.ru/images/2014/11/24/17/20141124172227866/detail_a846c540032e66cd055b47c26bacabd5.jpg" width="400" height="300" id="budapest" >
+<br> <br>
+    количество анкоров:
+<script>
+    document.write(document.anchors.length);
+</script>
+<br><br>
+    количество ссылок:
+<script>
+    document.write(document.links.length);
+</script>
+<br><br>
+    количество картинок:
+<script>
+    document.write(document.images.length);
+</script>
+<br><br>
+    ширина первой картинки:
+<script>
+    document.write(document.getElementById("alice").width)
+</script>
+<br><br>
+    ширина самой широкой картинки:
+<script>
+    document.write(Math.max(document.getElementById("alice").width, document.getElementById("budapest").width));
+</script>
+<br><br>
+    сумма широт:
+<script>
+    document.write(document.getElementById("alice").width + document.getElementById("budapest").width);
+</script>
+<form id="f1" name="f1">
+    оу: <input type="text" name="fml"><br>
+    вау: <input type="text" name="fml2"><br>
+    <input type="button" class="nof" name="noform" onclick="no('f1')" value="сбросить">
+    <input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f1').id)" value="принадлежность?">
+    <input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+    <input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+    <input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+</form><br><br>
+<form id="f2" name="f2">
+    оу: <input type="text" name="fml"><br>
+    вау: <input type="text" name="fml2"><br>
+    <input type="button" class="nof" name="noform" onclick="no('f2')" value="сбросить">
+    <input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f2').id)" value="принадлежность?">
+    <input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+    <input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+    <input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+</form><br><br>
+    <form id="f3" name="f3">
+        оу: <input type="text" name="fml"><br>
+        вау: <input type="text" name="fml2"><br>
+        <input type="button" class="nof" name="noform" onclick="no('f3')" value="сбросить">
+        <input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f3').id)" value="принадлежность?">
+        <input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+        <input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+        <input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+    </form><br><br>
+    <form id="f4" name="f4">
+        оу: <input type="text" name="fml"><br>
+        вау: <input type="text" name="fml2"><br>
+        <input type="button" class="nof" name="noform" onclick="no('f4')" value="сбросить">
+        <input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f4').id)" value="принадлежность?">
+        <input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+        <input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+        <input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+    </form><br><br>
+    <form id="f5" name="f5">
+        оу: <input type="text" name="fml"><br>
+        вау: <input type="text" name="fml2"><br>
+        <input type="button" class="nof" name="noform" onclick="no('f5')" value="сбросить">
+        <input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f5').id)" value="принадлежность?">
+        <input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+        <input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+        <input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+    </form><br><br>
+    <form id="f6" name="f6">
+        оу: <input type="text" name="fml"><br>
+        вау: <input type="text" name="fml2"><br>
+        <input type="button" class="nof" name="noform" onclick="no('f6')" value="сбросить">
+        <input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f6').id)" value="принадлежность?">
+        <input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+        <input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+        <input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+    </form><br><br>
+    <form id="f7" name="f7">
+        оу: <input type="text" name="fml"><br>
+        вау: <input type="text" name="fml2"><br>
+        <input type="button" class="nof" name="noform" onclick="no('f7')" value="сбросить">
+        <input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f7').id)" value="принадлежность?">
+        <input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+        <input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+        <input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+    </form><br><br>
+    <form id="f8" name="f8">
+        оу: <input type="text" name="fml"><br>
+        вау: <input type="text" name="fml2"><br>
+        <input type="button" class="nof" name="noform" onclick="no('f8')" value="сбросить">
+        <input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f8').id)" value="принадлежность?">
+        <input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+        <input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+        <input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+    </form><br><br>
+    <form id="f9" name="f9">
+        оу: <input type="text" name="fml"><br>
+        вау: <input type="text" name="fml2"><br>
+        <input type="button" class="nof" name="noform" onclick="no('f9')" value="сбросить">
+        <input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f9').id)" value="принадлежность?">
+        <input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+        <input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+        <input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+    </form><br><br>
+    <form id="f10" name="f10">
+        оу: <input type="text" name="fml"><br>
+        вау: <input type="text" name="fml2"><br>
+        <input type="button" class="nof" name="noform" onclick="no('f10')" value="сбросить">
+        <input type="button" class="showh" name="showhost" onclick="alert(document.getElementById('f10').id)" value="принадлежность?">
+        <input type="button" class="shown" name='showname' onclick="alert(document.getElementsByName('showname').value)" value="имя формы?">
+        <input type="button" class="send" name="send" onclick="formSubmit()" value="отправить">
+        <input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
+    </form>
+</form>
+<script type="text/javascript">
+    document.write(document.getElementById(f2).name)
+    function no(f)
+    {
+        document.getElementById(f).reset();
+    }
+</script>
+<br>
+<a href="#beginning">нажми, чтобы вернуться в начало</a><br>
+</body>
+    </html>
