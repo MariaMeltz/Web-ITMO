@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>8-9 лекция</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $("#but1").click(function(){
+                $("#par1").load("testfile.txt");
+            })
+
+        });
+    </script>
+<body bgcolor="#ffc0cb">
+<p id="par1">После нажатия на кнопку в данном поле будет отображено содержимое файла testfile.txt.</p>
+<input id="but1" type="button" value="Запросить файл" />
+</body>
+</html>
