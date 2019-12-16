@@ -217,12 +217,18 @@ URL:
         <input type="button" class="showa" name="showarea" onclick="alert('2')" value="поля?">
     </form>
 </form>
+    <br> четные формы через запятую: 
 <script type="text/javascript">
     document.write(document.getElementById(f2).name)
     function no(f)
     {
         document.getElementById(f).reset();
     }
+    for (i=1;i<document.forms.length;i++)
+{
+document.write(document.forms[i].name + "; ");
+i++;
+}
 </script>
 <br>
 <a href="#beginning">нажми, чтобы вернуться в начало</a><br>
