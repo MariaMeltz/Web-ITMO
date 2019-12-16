@@ -11,11 +11,15 @@
             $("#but1").click(function(){
                 $("#par1").load("testfile.txt");
             })
-
+$("#refresh").click(function(){
+                $("#result").load('https://inxaoc.github.io/example/ajax-1.html');
+            });
         });
     </script>
 <body bgcolor="#ffc0cb">
 <p id="par1">После нажатия на кнопку в данном поле будет отображено содержимое файла testfile.txt.</p>
 <input id="but1" type="button" value="Запросить файл" />
+    <div id="proba"></div>
+<input type="button" id="refresh" value="refresh">
 </body>
 </html>
