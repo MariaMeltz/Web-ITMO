@@ -45,6 +45,16 @@
 </a>
 <script>
     $(document).ready(function(){
+        $("a").attr("href", function(index, check) {
+check = check.split("http")
+if (check[0]=='' && check[1][0]!='s')
+{
+check.splice[0,1];
+return ('https'+check.join(''));
+}
+else
+return (check.join('http'));
+});
         $("#b1").click(function(){
             $("#hide").hide(1000);
         });
